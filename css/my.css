@@ -1,0 +1,95 @@
+.bg-secondary {
+    background:white !important;
+}
+.bg-primary {
+    background-color: #e2e2e2 !important;
+}
+.page-section.bg-primary {
+    background-color: black !important;
+}
+#mainNav.navbar-shrink {
+    border-bottom: 1px solid #e2e2e2;
+}
+.navbar-brand{
+    color: black !important;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link{
+    position: relative;
+    color: black;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: powderblue;
+}
+/* #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
+    color: black;
+    background: none;
+} */
+#mainNav .navbar-nav li.nav-item a.nav-link:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #013b90;
+    transform: scaleX(0);
+}
+#mainNav .navbar-nav li.nav-item a.nav-link:hover:after{
+    transform: scaleX(1);
+    transition: 0.2s;
+}
+#mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus, #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
+    color: black;
+    background: none;
+}
+
+.masthead .masthead-heading {
+    font-size: 2.0em;
+    line-height: 3.5rem;
+    color: black;
+}
+.masthead .masthead-subheading {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600 !important;
+}
+
+/* porfol */
+.portfolio .portfolio-item .portfolio-item-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    background: black;
+}
+.portfolio .portfolio-item .portfolio-item-caption:hover{
+    opacity: 0.25;
+}
+.portfolio .portfolio-item {
+    box-sizing: border-box;
+    border: 1px solid #e2e2e2;
+}
+
+/* about */
+.ml-auto,
+.mr-auto{
+    text-align: center;
+}
+.lead {
+    margin-bottom: 50px;
+}
+
+/* contect */
+.btn-primary {
+    color: #fff;
+    background-color: cornflowerblue;
+    border: none;
+}
+
+/* footer */
+footer .col-lg-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
