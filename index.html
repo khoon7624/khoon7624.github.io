@@ -10,20 +10,11 @@
   <!-- Theme CSS -->
   <link href="css/freelancer.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/my.css">
+  <link rel="stylesheet" href="css/jquery.fallingsnow.css">
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/snowfall.jquery.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $(document).snowfall({
-      minSize:5,
-      maxSize:10,
-      round:true
-    });
-  })
-</script>
+<script type="text/javascript" src="js/jquery.fallingsnow.min.js"></script>
 <body id="page-top">
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
       <div class="container">
@@ -287,15 +278,7 @@
         </div>
 
         <!-- Footer Social Icons -->
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">SNS</h4>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
-            <i class="fab fa-fw fa-facebook-f"></i>
-          </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
-            <i class="fab fa-fw fa-twitter"></i>
-          </a>
-        </div>
+        <div id="map" style="width:500px;height:400px"></div>
       </div>
     </div>
   </footer>
@@ -588,6 +571,7 @@
   <!-- <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
   <script src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a299abfb7e6edbae823ef8e7841c5ba2"></script>
   <script>
     var typing = document.getElementById('typing');
  
@@ -605,6 +589,12 @@
         .pauseFor(2500)
         .start();
 
+        var container = document.getElementById('map')
+        var options = {
+          center : new kakao.maps.LatLng(37.479426, 126.902137),
+          level : 6
+        };
+        var map = new kakao.maps.Map(container, options);
   </script>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
